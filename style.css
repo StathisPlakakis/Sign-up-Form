@@ -1,6 +1,6 @@
 body, div {
     padding: 0px;
-    margin: 0;
+    margin: 0px;
 }
 
 @font-face {
@@ -13,10 +13,16 @@ div.conta {
 }  
 
 div.left {
-
-    background-color: green;
+    position: relative;
+    background-image: url(images/roman-synkevych-vXInUOv1n84-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 40vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
 }
 
 div.right {
@@ -27,8 +33,11 @@ div.right {
 
 
 div.opacity {
+    position: absolute;
     background-color: rgba(255, 255, 255, 0.6);
     display: flex;
+    top: 21%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     font-family: MyFirstFont;
@@ -41,8 +50,20 @@ img.logo {
     height: 50px;
 }
 
-p.logo {margin-left: 10px;}
+p.logo {
+    margin-left: 10px;
+}
 
 span {
     color: purple;
+}
+
+div.shoutout {
+    color:lemonchiffon;
+    padding-bottom: 2.5%;
+    font-size: .8rem;
+}
+
+div.shoutout a:link {
+    color: lemonchiffon;
 }
