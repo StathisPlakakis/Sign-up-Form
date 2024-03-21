@@ -1,6 +1,11 @@
 body, div {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: black;
 }
 
 @font-face {
@@ -73,10 +78,12 @@ div.right {
     height: 100vh;
     width: 60vw;
     --text-color: rgb(221, 221, 221);
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 700px) {
-    .conta {
+    .conta, .data, .first, .second, .third {
       flex-direction: column;
     }
     .left {
@@ -85,28 +92,26 @@ div.right {
     .right {
         width: 100vw !important;
     }
+
+    .inputs {
+      margin-bottom: 10px;
+    }
+
+    .inputs input {
+      width: 70vw;
+    }
+
   }  
 
   .section1, .section2 {
     font-family: MyFirstFont;
-    font-size: 1.5rem;
     color: var(--text-color);
   }
 
   .section1 {
-    border-bottom: 1px solid rgb(185, 183, 183);
-
-  }
-  .data {
-    border-bottom: 2px solid rgb(183, 181, 181);
-  }
-
-  .submit button {
-    background-color: purple;
-    border: none;
-    color: var(--text-color);
-    width: 50%;
-    height: auto;
+    padding: 50px 40px;
+    padding-right: 80px;
+    font-size: 1.3rem;
   }
 
 
@@ -114,19 +119,19 @@ div.right {
     background-color: rgb(0, 0, 0);
     border: 1px solid var(--text-color);
     border-radius: 20px;
-    width: 25%;
     color: var(--text-color);
+    width: 22vw;
+    margin-right: 10px;
+    font-family: MyFirstFont;
+    font-size: 1rem;
   }
 
   label {
     font-size: 1rem;
     color: rgba(223, 223, 223, 0.8);
+    margin-bottom: 5px;
   }
 
-  .inputs {
-    display: flex;
-    flex-direction: column;
-  }
 
   .section3 {
     color: var(--text-color);
@@ -135,4 +140,57 @@ div.right {
   .section3 a {
     color: purple;
     text-decoration: none;
+    
   }
+
+
+
+  .section2 p {
+    padding-left: 40px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+  }
+
+
+  .data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first, .second, .third {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+  }
+
+  .submit button {
+    background-color: rgb(5, 5, 5);
+    border: 1px solid purple;
+    color: purple;
+    font-family: MyFirstFont;
+    font-size: 2rem;
+    border-radius: 40px;
+    padding: 20px;
+  }
+
+  .submit button:hover{
+    cursor: pointer;
+  }
+
+  .submit {
+    padding-left: 40px;
+    margin-top: 25px;
+  }
+
+  .section3 {
+    padding-left: 40px;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+
