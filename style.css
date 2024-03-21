@@ -126,6 +126,11 @@ div.right {
     font-size: 1rem;
   }
 
+   input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border: 1px solid purple;
+    outline: none;
+  }
+
   label {
     font-size: 1rem;
     color: rgba(223, 223, 223, 0.8);
@@ -180,6 +185,8 @@ div.right {
 
   .submit button:hover{
     cursor: pointer;
+    background-color: purple;
+    color: #000;
   }
 
   .submit {
