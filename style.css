@@ -148,6 +148,10 @@ div.right {
     
   }
 
+  .section3 a:hover {
+    color: var(--text-color);
+  }
+
 
 
   .section2 p {
@@ -207,3 +211,15 @@ div.right {
 }
   
 
+
+.invalid#Number + span::after {
+  content: "Requires 10 digits";
+}
+
+.invalid#Password + span::after {
+  content: "Requires 8 charachters";
+}
+
+.invalid#CPassword + span::after {
+  content: "Does not match";
+}

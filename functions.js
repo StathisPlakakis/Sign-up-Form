@@ -1,4 +1,4 @@
-const inputt = document.querySelector("#phone");
+const inputt = document.querySelector("#Number");
 
 inputt.addEventListener("input", (e) => {
     const value = e.target.value.trim();
@@ -21,6 +21,10 @@ pass1.addEventListener("input", (e) => {
     } else {
         e.target.classList.remove('invalid');
     }
+
+    if (e.target.value !== pass2.value) {
+        pass2.classList.add("invalid");
+    }
 })
 
 pass2.addEventListener("input", (e) => {
@@ -32,5 +36,18 @@ pass2.addEventListener("input", (e) => {
     }
 })
 
+const button = document.querySelector("#button");
 
+button.addEventListener("click", (e) => {
+    if (document.querySelector("#FirstName").value.length !== 0 && document.querySelector("#LastName").value.length !== 0 && document.querySelector("#Email").value.length !== 0 && document.querySelector("#Number").value.length !== 0 && document.querySelector("#Password").value.length !== 0 && document.querySelector("#CPassword").value.length !== 0 && document.querySelector("#Email").validity.valid) {
+            e.preventDefault();
+            const invalids = Array.from(document.querySelectorAll(".invalid"));
+            if (invalids.length === 0) {
+                document.querySelector('.myForm').submit();
+            } else {
+                alert("Fill all the inputs")
+            }
+        }
+
+})
 
